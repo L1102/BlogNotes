@@ -208,3 +208,7 @@ rpm -qa|grep vim
 yum -y install vim*
 ```
 
+
+
+
+
