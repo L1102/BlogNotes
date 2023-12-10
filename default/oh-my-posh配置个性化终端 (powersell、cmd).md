@@ -185,9 +185,7 @@ Import-Module -Name Terminal-Icons
 
 ![image-20231209193200685](https://cdn.jsdelivr.net/gh/L1102/pictures/img/image-20231209193200685.png)
 
-
-
-
+![image-20231210123724517](https://cdn.jsdelivr.net/gh/L1102/pictures/img/image-20231210123724517.png)
 
 
 
