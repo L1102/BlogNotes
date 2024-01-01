@@ -19,7 +19,7 @@
 PowerShell 配置文件是在 PowerShell 启动时运行的脚本，可以将配置文件用作登录脚本来自定义环境，可以添加命令、别名、函数、变量、管理单元、模块和 PowerShell 驱动器，
 还可以将其他特定于会话的元素添加到您的配置文件中，以便在每个会话中都可以使用它们，而无需导入或重新创建。
 
-- **一些常用的变量：**
+- 一些常用的变量：
 
 | 变量名                          | 说明                              |
 | :------------------------------ | --------------------------------- |
@@ -33,7 +33,7 @@ PowerShell 配置文件是在 PowerShell 启动时运行的脚本，可以将配
 
 ![image-20231209160710044](https://cdn.jsdelivr.net/gh/L1102/pictures/img/image-20231209160710044.png)
 
-> **`PowerShell 的配置文件是不会自己生成的，需要手动创建！`**
+> PowerShell 的配置文件是不会自己生成的，需要手动创建！
 
 ```bash
 # 查看当前是否存在 PowerShell 配置文件
@@ -42,7 +42,7 @@ PowerShell 配置文件是在 PowerShell 启动时运行的脚本，可以将配
 Test-Path $PROFILE
 ```
 
-- **创建配置文件**
+- 创建配置文件
 
 ````bash
 # 创建一个 PowerShell 配置文件
@@ -63,14 +63,14 @@ New-Item -Path $PROFILE -Type File -Force
 
 ### 使用 winget 安装（推荐）
 
-**1. 首先查看 Windows PowerShell 的执行策略**
+1. 首先查看 Windows PowerShell 的执行策略
 
 ```bash
 # 获取 Windows PowerShell 当前的执行策略
 get-ExecutionPolicy
 ```
 
-**执行策略状态说明**：
+执行策略状态说明：
 
 - **Restricted**：表示状态是禁止的，不载入配置文件也不执行脚本，是执行策略的默认值。
 - **RemoteSigned**：所有从互联网上下载的脚本必须通过信任的出版商签名(trusted publisher)。
@@ -82,7 +82,7 @@ get-ExecutionPolicy
 set-ExecutionPolicy RemoteSigned
 ```
 
-**2. 执行安装命令**
+2. 执行安装命令
 
 ```bash
 # oh-my-posh 安装命令
@@ -112,11 +112,11 @@ winget upgrade JanDeDobbeleer.OhMyPosh -s winget
 >
 > JetBrainsMono Nerd Font 字体：https://github.com/ryanoasis/nerd-fonts/releases/download/v3.1.1/JetBrainsMono.zip
 
-- **解压后，全选安装**
+- 解压后，全选安装
 
 ![image-20231209165227384](https://cdn.jsdelivr.net/gh/L1102/pictures/img/image-20231209165227384.png)
 
-- **终端配置 Nerd Font 字体**
+- 终端配置 Nerd Font 字体
 
 ![image-20231209170247768](https://cdn.jsdelivr.net/gh/L1102/pictures/img/image-20231209170247768.png)
 
@@ -129,7 +129,7 @@ get-Poshthemes
 
 ![image-20231209165919064](https://cdn.jsdelivr.net/gh/L1102/pictures/img/image-20231209165919064.png)
 
-- **用户记事本或其他编辑器打开之前创建的配置文件**
+- 用户记事本或其他编辑器打开之前创建的配置文件
 
 ```bash
 # 配置 oh-my-posh 主题，方式一：
@@ -148,7 +148,7 @@ oh-my-posh init pwsh --config "$env:POSH_THEMES_PATH/sim-web.omp.json" | Invoke-
 
 ![image-20231209154322403](https://cdn.jsdelivr.net/gh/L1102/pictures/img/image-20231209154322403.png)
 
-> **配置步骤和 Windows PowerShell 相同**
+> 配置步骤和 Windows PowerShell 相同
 
 ## 配置个性化 cmd
 
@@ -156,7 +156,7 @@ oh-my-posh init pwsh --config "$env:POSH_THEMES_PATH/sim-web.omp.json" | Invoke-
 
 > github地址：https://github.com/chrisant996/clink/releases
 
-- 安装后在 **clink** 安装目录下新建一个 **Comletions** 文件夹，用于存放 **lua** 脚本配置
+- 安装后在 **clink** 安装目录下新建一个 **Comletions** 文件夹，用于存放 **`lua`** 脚本配置
 
 ![image-20231209172350340](https://cdn.jsdelivr.net/gh/L1102/pictures/img/image-20231209172350340.png)
 
@@ -167,20 +167,20 @@ clink info
 clink set clink.path <你的 Comletions 目录的路径>
 ```
 
-- **编写 lua 脚本**
+- 编写 `lua` 脚本
 
-在**Comletions** 文件夹下创建一个文件名后缀为 **lua** 的文件
+在 **Comletions** 文件夹下创建一个文件名后缀为 **`lua`** 的文件
 
 ![image-20231209173245386](https://cdn.jsdelivr.net/gh/L1102/pictures/img/image-20231209173245386.png)
 
-```bash
-# 打开文件写入以下内容，保存文件后再次打开 cmd 即可生效
+```lua
+-- 打开文件写入以下内容，保存文件后再次打开 cmd 即可生效
 load(io.popen('oh-my-posh init cmd --config D:/你的op-my-posh安装目录/themes/sim-web.omp.json'):read("*a"))()
 ```
 
 ## 配置插件
 
-- **安装文件图标库**
+- 安装文件图标库
 
 ```bash
 # 在 PowerShell 中执行
