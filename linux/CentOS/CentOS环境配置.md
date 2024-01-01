@@ -144,7 +144,7 @@ rpm -qa | grep java
 yum -y remove <java-1.8.0-openjdk>
 ```
 
-2. 使用工具将jdk源码上传到系统中（放在**`/opt`**目录下）
+2. 使用工具将jdk源码上传到系统中（放在 **`/opt`** 目录下）
 
 3. 在 **`/usr/local`** 目录下创建一个 **`jdk`** 文件夹
 
@@ -152,7 +152,7 @@ yum -y remove <java-1.8.0-openjdk>
 sudo mkdir /usr/local/jdk
 ```
 
-4. 进入**`/opt`**目录并解压
+4. 进入 **`/opt`** 目录并解压
 
 ```bash
 cd /opt
@@ -168,7 +168,7 @@ sudo vim /etc/profile
 sudo vi /etc/profile
 ```
 
-- 按**`i`**键进行编辑，添加以下配置
+- 按 **`i`** 键进行编辑，添加以下配置
 
 ```bash
 export JAVA_HOME=/usr/local/jdk/jdk1.8.0_361
@@ -177,7 +177,7 @@ export CLASSPATH=.:$CLASSPATH:$JAVA_HOME/lib:$JRE_HOME/lib
 export PATH=$PATH:$JAVA_HOME/bin:$JRE_HOME/bin
 ```
 
-- 按**`Esc`**键，输入**`:wq`**保存退出
+- 按 **`Esc`** 键，输入 **`:wq`** 保存退出
 
 ```bash
 # 刷新 profile 文件
