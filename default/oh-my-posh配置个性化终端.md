@@ -85,10 +85,10 @@ set-ExecutionPolicy RemoteSigned
 **2. 执行安装命令**
 
 ```bash
-// oh-my-posh 安装命令
+# oh-my-posh 安装命令
 winget install JanDeDobbeleer.OhMyPosh -s winget --location D:\你的安装路径
 
-// oh-my-posh 更新命令
+# oh-my-posh 更新命令
 winget upgrade JanDeDobbeleer.OhMyPosh -s winget --location D:\你的安装路径
 ```
 
