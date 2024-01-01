@@ -103,7 +103,7 @@ docker-compose version
 
 > 下载地址：https://github.com/docker/compose/releases
 
-- **上传文件到 `/opt` **
+- 上传文件到 **`/opt`**
 
 ```bash
 cd /opt
@@ -127,7 +127,7 @@ yum install java-1.8.0-openjdk* -y
 
 
 
-**验证是否安装成功**
+- 验证是否安装成功
 
 ```bash
 java -version
@@ -135,7 +135,7 @@ java -version
 
 ### 方式二：下载源码手动安装
 
-**1. 删除系统自带的 jdk**
+1. 删除系统自带的 jdk
 
 ```bash
 # 查看系统自带jdk
@@ -144,15 +144,15 @@ rpm -qa | grep java
 yum -y remove <java-1.8.0-openjdk>
 ```
 
-**2. 使用工具将jdk源码上传到系统中，（放在`/opt`目录下）**
+2. 使用工具将jdk源码上传到系统中，（放在**`/opt`**目录下）
 
-**3. 在 `/usr/local` 目录下创建一个 `jdk` 文件夹**
+3. 在 **`/usr/local`** 目录下创建一个 **`jdk`** 文件夹
 
 ```bash
 sudo mkdir /usr/local/jdk
 ```
 
-**4. 进入`/opt`目录并解压**
+4. 进入**`/opt`**目录并解压
 
 ```bash
 cd /opt
@@ -160,7 +160,7 @@ cd /opt
 sudo tar -zxvf jdk-8u361-linux-x64.tar.gz -C /usr/local/jdk
 ```
 
-**5. 修改系统环境变量**
+5. 修改系统环境变量
 
 ```bash
 sudo vim /etc/profile
@@ -168,7 +168,7 @@ sudo vim /etc/profile
 sudo vi /etc/profile
 ```
 
-- **按`i`键进行编辑，添加以下配置**
+- 按**`i`**键进行编辑，添加以下配置
 
 ```bash
 export JAVA_HOME=/usr/local/jdk/jdk1.8.0_361
@@ -177,14 +177,14 @@ export CLASSPATH=.:$CLASSPATH:$JAVA_HOME/lib:$JRE_HOME/lib
 export PATH=$PATH:$JAVA_HOME/bin:$JRE_HOME/bin
 ```
 
-- **按`Esc`键，输入`:wq`保存退出**
+- 按**`Esc`**键，输入**`:wq`**保存退出
 
 ```bash
 # 刷新 profile 文件
 source /etc/profile
 ```
 
-**6. 验证是否安装成功**
+6. 验证是否安装成功
 
 ```bash
 java -version
