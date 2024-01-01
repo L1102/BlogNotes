@@ -17,16 +17,16 @@ sudo service sshd restart
 sudo apt install ufw
 ```
 
-> ```bash
-> ufw 命令行示例：
-> sudo ufw enable/disable：打开/关闭防火墙
-> sudo ufw reload：重启防火墙
-> sudo ufw status：查看已经定义的ufw规则
-> sudo ufw default allow/deny：外来访问默认允许/拒绝
-> sudo ufw allow/deny 20：允许/拒绝访问20端口，20后可跟/tcp或/udp，表示tcp或udp封包。
-> sudo ufw allow proto tcp from 192.168.0.0/24 to any port 22：允许自192.168.0.0/24的tcp封包访问本机的22端口。
-> sudo ufw delete allow/deny 20：删除以前定义的"允许/拒绝访问20端口"的规则
-> ```
+```bash
+# ufw 命令行示例：
+sudo ufw enable/disable：打开/关闭防火墙
+sudo ufw reload：重启防火墙
+sudo ufw status：查看已经定义的ufw规则
+sudo ufw default allow/deny：外来访问 默认允许/拒绝
+sudo ufw allow/deny 20：允许/拒绝访问20端口，20后可跟/tcp或/udp，表示tcp或udp封包。
+sudo ufw allow proto tcp from 192.168.0.0/24 to any port 22：允许自192.168.0.0/24的tcp封包访问本机的22端口。
+sudo ufw delete allow/deny 20：删除以前定义的"允许/拒绝访问20端口"的规则
+```
 
 ```bash
 sudo ufw allow 22 # 开放22端口，允许外部访问22端口(tcp/udp)
