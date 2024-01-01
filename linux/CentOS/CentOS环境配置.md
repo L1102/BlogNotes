@@ -144,7 +144,7 @@ rpm -qa | grep java
 yum -y remove <java-1.8.0-openjdk>
 ```
 
-2. 使用工具将jdk源码上传到系统中，（放在**`/opt`**目录下）
+2. 使用工具将jdk源码上传到系统中（放在**`/opt`**目录下）
 
 3. 在 **`/usr/local`** 目录下创建一个 **`jdk`** 文件夹
 
