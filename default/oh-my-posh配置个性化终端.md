@@ -110,7 +110,7 @@ winget upgrade JanDeDobbeleer.OhMyPosh -s winget
 
 > 下载地址：https://www.nerdfonts.com/font-downloads
 >
-> JetBrainsMono Nerd Font 字体：https://github.com/ryanoasis/nerd-fonts/releases/download/v3.1.1/JetBrainsMono.zip
+> JetBrainsMono Nerd Font 字体：https://github.com/ryanoasis/nerd-fonts/releases
 
 - 解压后，全选安装
 
