@@ -61,7 +61,11 @@ npm config set cache "E:\path\node_cache"
 - 配置npm镜像加速
 
 ```bash
+<<<<<<< HEAD
 # 查看当前镜像，默认为官方的 https://registry.npmjs.org/
+=======
+# 查看当前镜像，默认为官方的
+>>>>>>> BlogNotes-github/master
 npm config get registry
 
 # 设置镜像
